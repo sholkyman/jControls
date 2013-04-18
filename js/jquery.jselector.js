@@ -4,7 +4,7 @@
 	$.fn.jselector = function(options){
 		this.each(function(){
 
-			var $select   = $(this);
+			var $select   = $(this).hide();
 			var $selector = $select.wrap('<div class="jselector">').parent();
 			var $ul       = $('<ul>').hide().appendTo($selector);
 			var $span     = $('<span>').prependTo($selector);
