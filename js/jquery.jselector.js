@@ -6,7 +6,7 @@
 
 			var $select   = $(this).hide();
 			var $selector = $select.wrap('<div class="jselector">').parent();
-			var $ul       = $('<ul>').hide().appendTo($selector);
+			var $ul       = $('<ul>').hide().appendTo($selector).css('min-width',$selector.width());
 			var $span     = $('<span>').prependTo($selector);
 			var $dropdown = $('<button type="button" class="dropdown">').text('▼').appendTo($selector);
 
@@ -45,6 +45,10 @@
 					}, 1)
 				}
 			});
+
+			$(window).resize(function(){
+				$ul.css('min-width',$selector.width())
+			})
 		});
 	}
 })(jQuery);
