@@ -1,5 +1,3 @@
-// todo опция устанавливать ширину
-
 ;(function($){
 	$.fn.jselector = function(options){
 		this.each(function(){
@@ -11,11 +9,10 @@
 			var $dropdown = $('<button type="button" class="dropdown">').text('▼').appendTo($selector);
 
 			$('option', $select).each(function(i){
-
 				var $option = $(this);
 				var $item = $('<li>');
 				var text = $option.text();
-
+				
 				$ul.append($item.text(text));
 
 				if($option.is(':selected')){
